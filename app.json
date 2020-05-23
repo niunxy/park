@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/my/my/my",
+    "pages/my/myCar/myCar",
+    "pages/my/orderList/orderList",
+    "pages/my/parkRecord/parkRecord",
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/list/index",
+    "pages/my/contact/contact",
+    "pages/my/about/about",
+    "pages/my/feedback/feedback"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "blue",
+    "color": "#000",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath": "./assets/images/home.png",
+        "selectedIconPath": "./assets/images/home_fill.png"
+      },
+      {
+        "pagePath": "pages/my/my/my",
+        "text": "我的",
+        "iconPath": "./assets/images/my.png",
+        "selectedIconPath": "./assets/images/my_fill.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

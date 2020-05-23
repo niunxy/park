@@ -1,0 +1,46 @@
+<!--pages/my/my/my.wxml-->
+<view>
+	<view class="park-my-header">
+            <image src="../../../assets/images/my_bg.png" style="width:100%; height:431rpx"></image>
+            <view class="park-my-portrait">
+                  <image src="../../../assets/images/at.png"></image>
+                  <view>
+                        <view class="park-my-name">niun</view>
+                        <view class="park-my-phone">13521524056</view>
+                  </view>
+            </view>
+	</view>
+      <view class="park-my-content">
+      
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='orderList'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/list.png"></image>
+                  <text>订单列表</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellname='parkRecord'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/park.png"></image>
+                  <text>停车记录</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='myCar'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/car.png"></image>
+                  <text>我的车辆</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='contact'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/contact.png"></image>
+                  <text>联系我们</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='about'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/about.png"></image>
+                  <text>关于我们</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='feedback'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/feedback.png"></image>
+                  <text>意见反馈</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
+      </view>
+</view>

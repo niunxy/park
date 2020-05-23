@@ -1,0 +1,18 @@
+<!--pages/my/parkRecord/packRecord.wxml-->
+<view>
+      <view class="park-my-record">
+          <view class="park-my-record-header">
+              <text class="park-my-record-charge">充</text>
+              <text>中通国际停车场</text>
+          </view>
+          <view class="park-my-record-detail">
+                <image src="../../../assets/images/at.png"></image>
+                <view>
+                    <view><text class="park-my-record-title">用户名:</text>xzdvfd</view>
+                     <view><text class="park-my-record-title">停车时间:</text></view>
+                     <view><text class="park-my-record-title">联系号码:</text></view>
+                     <view><text class="park-my-record-title">交易号码:</text></view>
+                </view>
+          </view>
+      </view> 
+</view>

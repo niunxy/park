@@ -1,0 +1,46 @@
+/* pages/my/my/my.wxss */
+.park-my-cell{
+   overflow: hidden;
+   line-height: 90rpx;
+   border-bottom: 1rpx solid #ddd;
+   padding: 0 10rpx;
+}
+.park-my-list,.park-my-jump{
+   position: relative;
+   top:21rpx;
+}
+.park-my-list{
+    padding-right: 10rpx;
+}
+.park-my-header{
+   position: relative;
+}
+.park-my-portrait{
+   overflow: auto;
+   position: absolute;
+   left:10rpx;
+   top:42rpx;
+   width: 100%;
+   color:#fff;
+   font-size: 32rpx;
+}
+.park-my-portrait image{
+   width: 162rpx;
+   height: 162rpx;
+   float: left;
+   margin-right: 30rpx; 
+}
+.park-my-content{
+   position: relative;
+   top: -184rpx;
+   border-top-left-radius: 14rpx;
+   border-top-right-radius: 14rpx;
+   z-index: 99;
+   background-color: #fff;
+}
+.park-my-name{
+   margin-top: 6rpx;
+}
+.park-my-phone{
+   margin-top: 50rpx;
+}

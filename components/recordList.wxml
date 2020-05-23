@@ -1,0 +1,17 @@
+<!--components/recordList.wxml-->
+<view>
+      <view class="park-my-record" wx:for="{{list}}" wx:key="id">
+          <view>
+              <text class="park-my-record-charge">充</text>
+              <text>中通国际停车场</text>
+          </view>
+          <view class="park-my-record-detail">
+                <image src="../../../assets/images/car.jpg"></image>
+                <view>
+                    <view><text>用户名</text></view>
+                     <view><text>停车时间</text></view>
+                     <view><text>联系号码</text></view>
+                </view>
+          </view>
+      </view>
+</view>

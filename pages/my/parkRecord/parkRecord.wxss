@@ -1,0 +1,43 @@
+/* pages/my/parkRecord/packRecord.wxss */
+
+.park-my-record-charge{
+  background-color: orange;
+  border-radius: 50%;
+  width: 50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  display: inline-block;
+  text-align: center;
+  margin-right: 12rpx;
+}
+.park-my-record{
+  width: 696rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-left: 10rpx;
+  padding-bottom: 23rpx;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  margin-top: 30rpx;
+}
+.park-my-record-header{
+  line-height: 61rpx;
+  font-size:26rpx;
+}
+.park-my-record-detail{
+    display: flex;
+    color: #474F50;
+    font-size:26rpx;
+}
+.park-my-record-detail image{
+  width:154rpx;
+  height:154rpx;
+  margin-right: 63rpx;
+}
+.park-my-record-detail view view{
+  line-height: 38rpx;
+}
+.park-my-record-title{
+   display: inline-block;
+   width: 140rpx;
+}

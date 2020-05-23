@@ -1,0 +1,11 @@
+<!--pages/my/contact/contact.wxml-->
+<view>
+    <view class="park-my-contact-box">
+        <view>服务热线</view>
+        <button bindtap="callPhone">立即拨打</button>
+    </view>
+    <view>
+        <view>我们的邮箱</view>
+        <button bindtap="copyEmail">复制</button>
+    </view>
+</view>

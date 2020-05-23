@@ -1,0 +1,6 @@
+<!--components/list/index.wxml-->
+<view>
+    <view>
+          <image src=""></image> 
+    </view>
+</view>

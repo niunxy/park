@@ -1,0 +1,6 @@
+/* pages/my/contact/contact.wxss */
+.park-my-contact-box{
+    background-color: #fff;
+    margin: 30rpx auto;
+    width: 96%;
+}
