@@ -1,11 +1,17 @@
 <!--pages/my/contact/contact.wxml-->
 <view>
     <view class="park-my-contact-box">
-        <view>服务热线</view>
-        <button bindtap="callPhone">立即拨打</button>
+        <view class="title">服务热线</view>
+        <view class="info">注册咨询/软件使用咨询等问题处理</view>
+        <view>029-65691333</view>
+        <view>65692130</view>
+        <view>65692186</view>
+        <button class="btn-contact" bindtap="callPhone">立即拨打</button>
     </view>
-    <view>
-        <view>我们的邮箱</view>
-        <button bindtap="copyEmail">复制</button>
+    <view class="park-my-contact-box">
+        <view class="title">我们的邮箱</view>
+        <view class="info">补充资料、投诉与建议、变更账户信息、争议处理等问题处理</view>
+        <view class="">xianhr@hanweitech.com</view>
+        <button class="btn-contact" bindtap="copyEmail">复制</button>
     </view>
 </view>

@@ -2,5 +2,23 @@
 .park-my-contact-box{
     background-color: #fff;
     margin: 30rpx auto;
-    width: 96%;
+    width: 92%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #222222;
+    padding: 40rpx 0;
+    box-sizing: border-box;
+    border-radius: 12rpx;
+}
+.park-my-contact-box .title{
+    font-size: 32rpx;
+    color: #5099FF;
+}
+.park-my-contact-box .info{
+    padding: 30rpx 0;
+}
+.btn-contact{
+    background-color: #5099FF;
+    color:#fff;
+    margin-top: 46rpx;
 }

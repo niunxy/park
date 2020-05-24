@@ -65,12 +65,12 @@ Page({
   },
   callPhone: function(){
     wx.makePhoneCall({
-      phoneNumber: '18392989626' //仅为示例，并非真实的电话号码
+      phoneNumber: '029-65691333' //仅为示例，并非真实的电话号码
     })
   },
   copyEmail: function(){
     wx.setClipboardData({
-      data: '461104031@qq.com'
+      data: 'xianhr@hanweitech.com'
     })
   }
 })

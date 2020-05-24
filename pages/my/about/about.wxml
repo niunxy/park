@@ -1,2 +1,34 @@
 <!--pages/my/about/about.wxml-->
-<text>pages/my/about/about.wxml</text>
+<view>
+	<view class="park-my-about-content">
+		<view class="title">
+			<image src="../../../assets/images/info.png"></image>
+			<text>公司简介</text>
+		</view>
+		<view class="describtion">
+			《西安瀚恒信息科技有限公司（以下简称瀚恒信息）是由江苏瀚远科技股份有限公司（以下简称瀚远科技）全资设立的独立法人企业，公司位于西安高新区软件企业聚集地——SOHO同盟大厦，于2013年7月18日正式开业。瀚恒信息将传承瀚远科技的主体业务，着眼于西北地区本地特色和市场需求，目前重点为文物保护管理、公租房管理和政企服务等政府客户提供精准实时的软硬件整体解决方案和服务。
+		</view>
+	</view>
+	<view class="park-my-about-content">
+		<view class="title">
+			<image src="../../../assets/images/info.png"></image>
+			<text>服务范围</text>
+		</view>
+		<view class="describtion">
+
+			文物保护管理信息化利用物联网、移动互联网等技术，为世界遗产、大遗址和文物保护单位提供监测预警管理信息化解决方案。通过对遗产本体、周边环境和管理行为的监测与管理，为文物保护提供科学依据。
+			公租房管理信息化利用移动互联网、工作流等技术，为公租房管理部门提供租赁管理和物业管理解决方案，为符合条件的租户提供在线租房解决方案。
+			政企服务管理信息化利用云计算技术，基于法人基础数据库，为政府和企业客户提供法人信息综合分析、宏观经济预测、政企互动等业务解决方案
+
+		</view>
+	</view>
+	<view class="park-my-about-content">
+		<view class="title">
+			<image src="../../../assets/images/info.png"></image>
+			<text>公司愿景</text>
+		</view>
+		<view class="describtion">
+			瀚恒信息的愿景是成为西北地区领先的文物监测与保护管理信息化解决方案提供商。瀚恒信息将和瀚远科技一起为为西部地区电子政务市场提供领先的“亲商”管理综合政务解决方案；为遗产地、大遗址等文保单位提供监测方案咨询、监测体系建设、监测软件开发和监测科学研究等全方位服务！
+		</view>
+	</view>
+</view>

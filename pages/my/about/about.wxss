@@ -1,1 +1,28 @@
 /* pages/my/about/about.wxss */
+.park-my-about-content{
+   width: 94%;
+   margin: 0 auto;
+   border-radius: 12rpx;
+   background-color: #fff;
+   padding: 0 24rpx 48rpx;
+   margin-top: 16rpx;
+   box-sizing: border-box;
+}
+.park-my-about-content .title image{
+   width: 60rpx;
+   height:126rpx;
+}
+.park-my-about-content .title text{
+  position: relative;
+  bottom: 16rpx;
+  padding-left: 6rpx;
+  color: #343434;
+  font-size: 30rpx;
+}
+.describtion{
+  text-indent: 2em;
+  font-size: 24rpx;
+  color: #343434;
+  line-height: 36rpx;
+  padding-top: 16rpx;
+}
