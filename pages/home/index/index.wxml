@@ -1,4 +1,47 @@
 <!--pages/home/index/index.wxml-->
 <view>
-shouye 
+	<view class="park-my-header">
+            <image src="../../../assets/images/my_bg.png" style="width:100%; height:431rpx"></image>
+            <view class="park-my-portrait">
+                  <image src="../../../assets/images/at.png"></image>
+                  <view>
+                        <view class="park-my-name">niun</view>
+                        <view class="park-my-phone">13521524056</view>
+                  </view>
+            </view>
+	</view>
+      <view class="park-my-content">
+          <view class="park-index-park-t">
+              <view>
+                  <image src="../../../assets/images/month.png"></image>
+                  <view>包月停车</view>
+              </view>
+              <view>
+                  <image src="../../../assets/images/half.png"></image>
+                  <view>半年停车</view>
+              </view>
+              <view>
+                  <image src="../../../assets/images/year.png"></image>
+                  <view>包年停车</view>
+              </view>
+              <view>
+                  <image src="../../../assets/images/ls.png"></image>
+                  <view>临时停车</view>
+              </view>
+          </view>
+          <view class="line">
+            <image src="../../../assets/images/line.png"></image>
+          </view>
+          <view class="park-index-park-news">
+              <view class="index-news-title">
+                  <view>新闻资讯</view>
+                  <view>更多<image class="arrow" src="../../../assets/images/arrow.png"></image></view>
+              </view>
+              <view class="news-item">
+                  <image src="../../../assets/images/news.png"></image>
+                  <view>中天国际停车场正式入驻非机动车智能停车平台，欢迎广大人民办理停车服务</view>
+              </view>
+          </view>
+      </view>
+      
 </view>
