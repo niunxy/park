@@ -1,0 +1,67 @@
+/* pages/home/park/park.wxss */
+.park-my-cell{
+  overflow: hidden;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #ddd;
+  padding: 0 10rpx;
+}
+.park-my-list,.park-my-jump{
+  position: relative;
+  top:21rpx;
+}
+.park-my-list{
+   padding-right: 10rpx;
+}
+.park-my-header{
+  position: relative;
+}
+.park-my-portrait{
+  overflow: auto;
+  position: absolute;
+  left:10rpx;
+  top:42rpx;
+  width: 100%;
+  color:#fff;
+  font-size: 32rpx;
+  text-align: center;
+}
+.park-my-portrait image{
+  width: 162rpx;
+  height: 162rpx;
+  
+}
+.park-my-content{
+  position: relative;
+  top: -92rpx;
+  border-top-left-radius: 14rpx;
+  border-top-right-radius: 14rpx;
+  z-index: 99;
+  background-color: #fff;
+  padding: 46rpx 100rpx;
+}
+.park-my-name{
+  margin-top: 6rpx;
+}
+
+.title{
+  color: #5099FF;
+  font-size: 34rpx;
+  text-align: center;
+}
+.section{
+    display: flex;
+    padding: 10rpx 0;
+    font-size: 28rpx;
+}
+.section_title{
+  padding: 10rpx 40rpx 10rpx 0;
+  flex: 1;
+  
+  color: #333;
+}
+.section_input{
+  border-bottom: 1rpx solid #ddd;
+  padding: 10rpx;
+  flex: 2;
+  color: #8D989C;
+}

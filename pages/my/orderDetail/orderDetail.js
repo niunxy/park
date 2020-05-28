@@ -1,4 +1,4 @@
-// pages/my/orderList/orderList.js
+// pages/my/orderDetail/orderDetail.js
 Page({
 
   /**
@@ -62,10 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  orderHandle: function(){
-    wx.navigateTo({
-      url: '../orderDetail/orderDetail',
-    })
   }
 })

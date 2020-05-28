@@ -1,0 +1,56 @@
+<!--pages/home/park/park.wxml-->
+<view>
+	<view class="park-my-header">
+		<image src="../../../assets/images/my_bg.png" style="width:100%; height:431rpx"></image>
+		<view class="park-my-portrait">
+			<image src="../../../assets/images/at.png"></image>
+			<view>
+				<view class="park-my-name">niun</view>
+			</view>
+		</view>
+	</view>
+	<view class="park-my-content">
+		<view class="title">需付款：¥400.00元</view>
+		<view class="section">
+			<view class="section_title">车主信息</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder="将会获取焦点"/></view>
+			<!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					当前选择：{{array[index]}}
+				</view>
+			</picker> --> 
+		</view>
+    <view class="section">
+			<view class="section_title">联系电话</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">身份证号</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+    <view class="section ">
+			<view class="section_title">小区名称</view>
+			<picker class="section_input" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					{{array[index]}}
+				</view>
+			</picker> 
+		</view>
+    <view class="section">
+			<view class="section_title">停车场</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">房号</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">车辆类型</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">所停车辆</view>
+      <view class="section_input"><input class="weui-input" auto-focus placeholder=""/></view>
+		</view>
+	</view>
+</view>

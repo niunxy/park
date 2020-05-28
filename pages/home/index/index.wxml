@@ -10,9 +10,30 @@
                   </view>
             </view>
 	</view>
+    <view>
+    
+    </view>
       <view class="park-my-content">
+      <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" circular="{circular}" interval="{{interval}}" duration="{{duration}}">
+        
+          <swiper-item>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+            <image src="../../../assets/images/banner.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+            <image src="../../../assets/images/banner.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../../../assets/images/banner.png"></image>
+          </swiper-item>
+        
+      </swiper>
+    </view>
           <view class="park-index-park-t">
-              <view>
+              <view bindtap="parkHandle">
                   <image src="../../../assets/images/month.png"></image>
                   <view>包月停车</view>
               </view>
