@@ -1,0 +1,38 @@
+<!--pages/home/register/register.wxml-->
+<view>
+    <view class="section">
+			<view class="section_title">业主姓名</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入业主姓名"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">身份证号</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">联系电话</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">用户住址</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入用户住址"/></view>
+		</view>
+    <view class="upload">
+        <view class="upload-section">
+            <image src="../../../assets/images/front.png"></image>
+            <view>请上传身份证正面</view>
+        </view>
+        <view class="upload-section">
+            <image src="../../../assets/images/end.png"></image>
+            <view>请上传身份证反面</view>
+        </view>
+        <view class="upload-section">
+            <image src="../../../assets/images/front.png"></image>
+            <view>请上传手持身份证照片</view>
+        </view>
+        <view class="upload-section">
+            <image src="../../../assets/images/front.png"></image>
+            <view>请上传人脸认证</view>
+        </view>
+    </view>
+    <button class="btn-contact" bindtap="copyEmail">完成提交</button>
+</view>

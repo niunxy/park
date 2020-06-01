@@ -37,11 +37,11 @@
                   <image src="../../../assets/images/month.png"></image>
                   <view>包月停车</view>
               </view>
-              <view>
+              <view bindtap="halfParkHandle">
                   <image src="../../../assets/images/half.png"></image>
                   <view>半年停车</view>
               </view>
-              <view>
+              <view bindtap="yearParkHandle">
                   <image src="../../../assets/images/year.png"></image>
                   <view>包年停车</view>
               </view>

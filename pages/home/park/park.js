@@ -6,7 +6,14 @@ Page({
    */
   data: {
     array: ['美国', '中国', '巴西', '日本'],
-    index:0
+    index:0,
+    carOwner:'',
+    phone:'',
+    idCard:'',
+    parkPlace:'',
+    houseNo:'',
+    carType:'',
+    parkCar:'',
   },
 
   /**
@@ -70,4 +77,13 @@ Page({
       index: e.detail.value
     })
   },
+  bindDataHandle: function(event){
+      const type = event.currentTarget.dataset.type
+      console.log(event)
+      if(type){
+            this.setData({
+              [type]:event.detail.value
+            })
+      }
+  }
 })

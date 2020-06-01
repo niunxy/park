@@ -12,7 +12,9 @@
     "pages/my/about/about",
     "pages/my/feedback/feedback",
     "pages/home/park/park",
-    "pages/my/orderDetail/orderDetail"
+    "pages/my/orderDetail/orderDetail",
+    "pages/home/register/register",
+    "pages/home/carInfo/carInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

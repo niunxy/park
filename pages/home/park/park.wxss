@@ -47,6 +47,7 @@
   color: #5099FF;
   font-size: 34rpx;
   text-align: center;
+  margin-bottom: 20rpx;
 }
 .section{
     display: flex;
