@@ -68,5 +68,17 @@ Page({
     wx.navigateTo({
       url: '../orderDetail/orderDetail',
     })
+  },
+  init(){
+    http('/getOrderList',{
+
+    }).then((res) => {
+      console.log(res)
+      if(res.code == 200){
+          this.setData({
+            orderList: res.orderList
+          })
+      }
+    })
   }
 })

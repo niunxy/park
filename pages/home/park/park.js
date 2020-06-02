@@ -1,4 +1,5 @@
 // pages/home/park/park.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
@@ -85,5 +86,8 @@ Page({
               [type]:event.detail.value
             })
       }
+  },
+  init(){
+    http('getVillageList')
   }
 })

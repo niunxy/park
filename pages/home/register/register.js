@@ -1,18 +1,21 @@
 // pages/home/register/register.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    villageList:[],
+    array: ['美国', '中国', '巴西', '日本'],
+    index:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.initArea()
   },
 
   /**
@@ -26,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -62,5 +65,37 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  initArea(){
+    http('/getVillageList',null).then((res) => {
+        if(res.code === 200){
+            this.setData({
+              villageList:res.villageList
+            })
+        }
+    })
+},
+upload(){
+    wx.chooseImage({
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'https://implement.mynatapp.cc/dev-api/wx/data/idCardUpload', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success (res){
+            const data = res.data
+            debugger
+            //do something
+          }
+        })
+      }
+    })
+}
 })

@@ -12,7 +12,8 @@ Page({
     autoplay: true,
     circular: true,
     interval: 2000,
-    duration: 500
+    duration: 500,
+    villageList:[]
   },
 
   /**
@@ -25,14 +26,17 @@ Page({
               //发起网络请求
               http('/loginApp',{
                 code:res.code
-              }).then((res) => {
-                debugger
+              },'get').then((res) => {
+                  if(res.code == 200){
+                    wx.setStorageSync('uToken', res.uToken)
+                  }
               })
             } else {
               console.log('登录失败！' + res.errMsg)
             }
           }
         })
+        
   },
 
   /**
@@ -84,9 +88,20 @@ Page({
 
   },
   parkHandle: function(){
-      wx.navigateTo({
-        url: '../park/park',
+      http('/getOrderInfo',{
+        planType:'N'
+      }).then((res) => {
+          if(res.code == 200){
+              if(res.errCode === 4){
+                wx.navigateTo({
+                  url: '../register/register',
+                })
+              }
+          }
       })
+      // wx.navigateTo({
+      //   url: '../park/park',
+      // })
   },
   halfParkHandle: function(){
       wx.navigateTo({
@@ -97,5 +112,5 @@ Page({
       wx.navigateTo({
         url: '../carInfo/carInfo',
       })
-  },
+  }
 })

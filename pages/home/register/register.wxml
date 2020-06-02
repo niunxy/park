@@ -12,13 +12,21 @@
 			<view class="section_title">联系电话</view>
       <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
 		</view>
+    <view class="section ">
+			<view class="section_title">小区名称</view>
+			<picker class="section_input" bindchange="bindPickerChange" value="{{index}}" range="{{villageList}}" range-key="villageName">
+				<view class="picker">
+					{{villageList[index].villageName}}
+				</view>
+			</picker> 
+		</view>
     <view class="section">
 			<view class="section_title">用户住址</view>
       <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入用户住址"/></view>
 		</view>
     <view class="upload">
         <view class="upload-section">
-            <image src="../../../assets/images/front.png"></image>
+            <image bindtap="upload" src="../../../assets/images/front.png"></image>
             <view>请上传身份证正面</view>
         </view>
         <view class="upload-section">
