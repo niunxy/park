@@ -1,0 +1,45 @@
+/* pages/home/register/register.wxss */
+.section{
+  display: flex;
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  border-bottom: 1px solid #ccc;
+}
+.section_title{
+padding: 10rpx 40rpx 10rpx 0;
+flex: 1;
+color: #333;
+text-align: right;
+}
+.section_input{
+border-bottom: 1rpx solid #ddd;
+padding: 10rpx;
+flex: 3;
+color: #8D989C;
+}
+.btn-contact{
+  background-color: #5099FF;
+  color:#fff;
+  margin-top: 46rpx;
+}
+.upload{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.upload .upload-section{
+  width: 46%;
+  height:304rpx;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+.upload image{
+  width: 100%;
+  height:254rpx;
+  border: 1rpx dashed #ccc;
+}
+.upload .upload-section view{
+  line-height: 50rpx;
+}

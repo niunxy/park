@@ -1,0 +1,36 @@
+<!--pages/home/carInfo/carInfo.wxml-->
+<view>
+<view class="section ">
+			<view class="section_title">车辆类型</view>
+			<picker class="section_input" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					{{array[index]}}
+				</view>
+			</picker> 
+		</view>
+  <view class="section">
+			<view class="section_title">车辆编号</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入车辆编号"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">电瓶品牌</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入电瓶品牌"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">车辆号码</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入车辆号码"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">车架号码</view>
+      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入车架号码"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">购买价格</view>
+      <view class="section_input"><input data-type="phone" type="number" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入购买价格"/></view>
+		</view>
+    <view class="upload-car">
+    <image src="../../../assets/images/photo.png"></image>
+    <view>请上传车辆照片</view>
+    </view>
+    <button class="submit">完成提交</button>
+</view>

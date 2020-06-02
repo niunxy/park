@@ -1,0 +1,37 @@
+/* pages/home/carInfo/carInfo.wxss */
+.section{
+  display: flex;
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  border-bottom: 1px solid #ccc;
+}
+.section_title{
+padding: 10rpx 40rpx 10rpx 0;
+flex: 1;
+color: #333;
+text-align: right;
+}
+.section_input{
+border-bottom: 1rpx solid #ddd;
+padding: 10rpx;
+flex: 3;
+color: #8D989C;
+}
+.upload-car{
+  background-color: #F9F9F9;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #333333;
+  font-size: 24rpx;
+  padding: 40rpx 0 20rpx 0;
+}
+.upload-car image{
+    width: 140rpx;
+    height: 140rpx;
+    margin-bottom: 12rpx;
+}
+.submit{
+    background-color: #5099FF;
+    color:#fff;
+    
+}

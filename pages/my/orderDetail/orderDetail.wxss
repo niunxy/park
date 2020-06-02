@@ -1,0 +1,77 @@
+/* pages/my/orderDetail/orderDetail.wxss */
+.detail-content{
+  width: 94%;
+  margin: 0 auto;
+  border-radius: 12rpx;
+  background-color: #fff;
+  padding: 0 24rpx 12rpx;
+  margin-top: 16rpx;
+  box-sizing: border-box;
+}
+.park-my-order-content{
+  display: flex;
+  color: #474F50;
+  font-size: 26rpx;
+}
+.content{
+    width: calc(100% - 50rpx);
+    padding-right: 20rpx;
+    box-sizing: border-box;
+}
+.park-my-order-content .title{
+  position: relative;
+  width: 50rpx;
+}
+.park-my-order-content .title image{
+  width: 50rpx;
+  height:66rpx;
+  position: absolute;
+  z-index: 9;
+}
+.park-my-order-content .title text{
+  position: absolute;
+  top:6rpx;
+  z-index: 10;
+  width: 50rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}
+.order-title{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10rpx;
+  height: 66rpx;
+}
+.order-title text{
+  padding-top: 10rpx;
+}
+.park-my-order-detail{
+  display: flex;
+}
+.park-my-order-detail image{
+  width: 130rpx;
+  height: 130rpx;
+  margin-right: 54rpx;
+}
+.order-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  color: #8D989C;
+  font-size: 24rpx;
+  margin-top: 18rpx;
+}
+.amount{
+  width: 130rpx;
+  text-align: center;
+}
+
+
+.item{
+  display: flex;
+}

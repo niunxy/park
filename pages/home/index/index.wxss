@@ -89,3 +89,6 @@
   height:200rpx;
   margin-right: 20rpx;
 }
+.page-section image{
+  width: 100%;
+}

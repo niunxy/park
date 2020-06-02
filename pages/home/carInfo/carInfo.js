@@ -1,19 +1,19 @@
-// pages/my/orderList/orderList.js
-const http =  require('../../../fetch/api')
+// pages/home/carInfo/carInfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    orderList:[]
+    array: ['美国', '中国', '巴西', '日本'],
+    index:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.init()
+
   },
 
   /**
@@ -63,10 +63,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  orderHandle: function(){
-    wx.navigateTo({
-      url: '../orderDetail/orderDetail',
-    })
   }
 })

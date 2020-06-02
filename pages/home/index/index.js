@@ -6,7 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    circular: true,
+    interval: 2000,
+    duration: 500
   },
 
   /**
@@ -76,5 +82,20 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  parkHandle: function(){
+      wx.navigateTo({
+        url: '../park/park',
+      })
+  },
+  halfParkHandle: function(){
+      wx.navigateTo({
+        url: '../register/register',
+      })
+  },
+  yearParkHandle: function(){
+      wx.navigateTo({
+        url: '../carInfo/carInfo',
+      })
+  },
 })
