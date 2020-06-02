@@ -1,18 +1,19 @@
 // pages/my/myCar/myCar.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    carList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this.init()
   },
 
   /**
@@ -62,5 +63,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  init(){
+    http('/getUserCarList',{
+
+    }).then((res) => {
+      console.log(res)
+      if(res.code == 200){
+          this.setData({
+            carList: res.carList
+          })
+      }
+    })
   }
 })
