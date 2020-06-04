@@ -65,7 +65,7 @@ Page({
 
   },
   init(){
-    http('/getOrderList',{
+    http('/wx/getOrderList',{
 
     }).then((res) => {
       console.log(res)

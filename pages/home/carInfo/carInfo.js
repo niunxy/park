@@ -1,12 +1,47 @@
 // pages/home/carInfo/carInfo.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array: ['美国', '中国', '巴西', '日本'],
+    array: ['自行车', '摩托车', '电动车', '小轿车','卡车'],
     index:0,
+    carPic:'',
+    car:'',
+    carBrand:'',
+    carCode:'',
+    carVin:'',
+    buyPrice:'',
+    buyTime:''
+  },
+
+  submitHandle(){
+      http('/wx/insertUserCar',{
+        carBrand:this.data.carBrand,
+        carCode:this.data.carCode,
+        carVin:this.data.carVin,
+        buyPrice:this.data.buyPrice,
+        carPic:'',
+        carType:'',
+        buyTime:''
+
+      },'post').then((res) => {
+
+      })
+  },
+
+  bindchange(e){
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  bindDateChange: function(e) {
+    this.setData({
+      buyTime: e.detail.value
+    })
   },
 
   /**
@@ -63,5 +98,33 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  bindHandle(event){
+      const type = event.currentTarget.dataset.type
+      this.setData({
+         [type]:event.detail.value
+      })
+  },
+  upload(event){
+    const that = this
+    wx.chooseImage({
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: `${app.globalData.baseUrl}/wx/data/idCardUpload`, //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success (res){
+            const data = JSON.parse(res.data)
+            if(data.code === 200) {
+              that.setData({
+                carPic:''
+              })
+            }
+            //do something
+          }
+        })
+      }
+    })
+},
 })

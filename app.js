@@ -1,4 +1,5 @@
 //app.js
+const http =  require('./fetch/api')
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -10,6 +11,29 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url:this.globalData.baseUrl + '/wx/loginApp',
+            data:{
+              code:res.code
+            },
+            success: function(res){
+              if(res.data.code == 200){
+                  wx.setStorageSync('uToken', res.data.uToken)
+              }
+            }
+          })
+          // http('/wx/loginApp',{
+          //   code:res.code
+          // },'get').then((res) => {
+          //     if(res.code == 200){
+          //       wx.setStorageSync('uToken', res.uToken)
+          //     }
+          // })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
       }
     })
     // 获取用户信息
@@ -34,6 +58,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseUrl:'https://implement.mynatapp.cc/dev-api'
   }
 })

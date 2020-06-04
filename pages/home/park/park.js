@@ -88,6 +88,6 @@ Page({
       }
   },
   init(){
-    http('getVillageList')
+    
   }
 })

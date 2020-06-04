@@ -1,18 +1,19 @@
 // pages/my/about/about.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    aboutUsList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this.init()
   },
 
   /**
@@ -62,5 +63,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  init(){
+      http('/wx/getAboutUsList',null).then((res) => {
+          if(res.code === 200){
+              this.setData({
+                aboutUsList:res.aboutUsList
+              })
+          }
+      })
   }
 })

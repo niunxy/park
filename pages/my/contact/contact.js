@@ -1,18 +1,19 @@
 // pages/my/contact/contact.js
+const http =  require('../../../fetch/api')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    contactusList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this.init()
   },
 
   /**
@@ -72,5 +73,14 @@ Page({
     wx.setClipboardData({
       data: 'xianhr@hanweitech.com'
     })
+  },
+  init(){
+      http('/wx/getContactUsList',null).then((res) => {
+          if(res.code === 200) {
+              this.setData({
+                contactusList:res.contactusList
+              })
+          }
+      })
   }
 })

@@ -2,45 +2,53 @@
 <view>
     <view class="section">
 			<view class="section_title">业主姓名</view>
-      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入业主姓名"/></view>
+      <view class="section_input"><input data-type="realName" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入业主姓名"/></view>
 		</view>
     <view class="section">
 			<view class="section_title">身份证号</view>
-      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
+      <view class="section_input"><input data-type="idCard" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
 		</view>
     <view class="section">
 			<view class="section_title">联系电话</view>
-      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
+      <view class="section_input"><input data-type="phonenumber" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">地址</view>
+      <view class="section_input"><input data-type="address" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
 		</view>
     <view class="section ">
 			<view class="section_title">小区名称</view>
-			<picker class="section_input" bindchange="bindPickerChange" value="{{index}}" range="{{villageList}}" range-key="villageName">
+			<picker class="section_input" bindchange="bindPickerChange" value="{{villageList.villageId}}" range="{{villageList}}" range-key="villageName">
 				<view class="picker">
 					{{villageList[index].villageName}}
 				</view>
 			</picker> 
 		</view>
-    <view class="section">
+    <!-- <view class="section">
 			<view class="section_title">用户住址</view>
       <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入用户住址"/></view>
-		</view>
+		</view> -->
     <view class="upload">
         <view class="upload-section">
-            <image bindtap="upload" src="../../../assets/images/front.png"></image>
+            <image wx:if="{{!frontPic}}" bindtap="upload" data-type="1" src="../../../assets/images/front.png"></image>
+            <image wx:else bindtap="upload" data-type="1" src="{{frontPic}}"></image>
             <view>请上传身份证正面</view>
         </view>
         <view class="upload-section">
-            <image src="../../../assets/images/end.png"></image>
+            <image wx:if="{{!endPic}}" bindtap="upload" data-type="2" src="../../../assets/images/end.png"></image>
+            <image wx:else bindtap="upload" data-type="2" src="{{endPic}}"></image>
             <view>请上传身份证反面</view>
         </view>
         <view class="upload-section">
-            <image src="../../../assets/images/front.png"></image>
+            <image wx:if="{{!handPic}}" bindtap="upload" data-type="3" src="../../../assets/images/front.png"></image>
+            <image wx:else bindtap="upload" data-type="3" src="{{handPic}}"></image>
             <view>请上传手持身份证照片</view>
         </view>
         <view class="upload-section">
-            <image src="../../../assets/images/front.png"></image>
+            <image wx:if="{{!facePic}}" bindtap="faceUpload" src="../../../assets/images/front.png"></image>
+            <image wx:else bindtap="faceUpload" src="{{facePic}}"></image>
             <view>请上传人脸认证</view>
         </view>
     </view>
-    <button class="btn-contact" bindtap="copyEmail">完成提交</button>
+    <button class="btn-contact" bindtap="submitHandle">完成提交</button>
 </view>

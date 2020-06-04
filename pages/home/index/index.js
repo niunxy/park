@@ -1,5 +1,6 @@
 // pages/home/index/index.js
 const http =  require('../../../fetch/api')
+const app = getApp()
 Page({
 
   /**
@@ -13,30 +14,16 @@ Page({
     circular: true,
     interval: 2000,
     duration: 500,
-    villageList:[]
+    villageList:[],
+    rotationPicList:[],
+    baseUrl:app.globalData.baseUrl
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        wx.login({
-          success (res) {
-            if (res.code) {
-              //发起网络请求
-              http('/loginApp',{
-                code:res.code
-              },'get').then((res) => {
-                  if(res.code == 200){
-                    wx.setStorageSync('uToken', res.uToken)
-                  }
-              })
-            } else {
-              console.log('登录失败！' + res.errMsg)
-            }
-          }
-        })
-        
+      this.initBanner()
   },
 
   /**
@@ -88,7 +75,7 @@ Page({
 
   },
   parkHandle: function(){
-      http('/getOrderInfo',{
+      http('/wx/getOrderInfo',{
         planType:'N'
       }).then((res) => {
           if(res.code == 200){
@@ -112,5 +99,14 @@ Page({
       wx.navigateTo({
         url: '../carInfo/carInfo',
       })
+  },
+  initBanner(){
+     http('/wx/getRotationPicList',null).then((res) => {
+        if(res.code == 200){
+          this.setData({
+            rotationPicList:res.rotationPicList
+          })
+        }
+     })
   }
 })
