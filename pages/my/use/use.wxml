@@ -1,0 +1,17 @@
+<!--pages/my/use/use.wxml-->
+<view>
+	<view class="steps" wx:for="{{howuseList}}" wx:key="*this">
+		<view class="num">
+			{{index+1}}
+		</view>
+		<view>
+ 
+			<view class="howuseTitle">
+				{{item.howuseTitle}}
+			</view>
+			<view>
+				<rich-text nodes="{{item.howuseContent}}"></rich-text>
+			</view>
+		</view>
+	</view>
+</view>

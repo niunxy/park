@@ -65,7 +65,7 @@ Page({
 
   },
   init(){
-    http('/wx/getOrderList',{
+    http('/wx/getParkRecordList',{
 
     }).then((res) => {
       console.log(res)

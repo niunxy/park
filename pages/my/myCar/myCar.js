@@ -9,6 +9,12 @@ Page({
     carList:[]
   },
 
+  addCar(){
+     wx.navigateTo({
+       url: '../../home/carInfo/carInfo',
+     })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -65,7 +71,7 @@ Page({
 
   },
   init(){
-    http('/getUserCarList',{
+    http('/wx/getUserCarList',{
 
     }).then((res) => {
       console.log(res)

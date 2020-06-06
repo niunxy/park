@@ -1,5 +1,5 @@
 // pages/home/index/index.js
-const http =  require('../../../fetch/api')
+const http = require('../../../fetch/api')
 const app = getApp()
 Page({
 
@@ -14,16 +14,18 @@ Page({
     circular: true,
     interval: 2000,
     duration: 500,
-    villageList:[],
-    rotationPicList:[],
-    baseUrl:app.globalData.baseUrl
+    villageList: [],
+    rotationPicList: [],
+    baseUrl: app.globalData.baseUrl,
+    newsList:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.initBanner()
+    this.initBanner()
+    this.initNews()
   },
 
   /**
@@ -74,39 +76,72 @@ Page({
   onShareAppMessage: function () {
 
   },
-  parkHandle: function(){
-      http('/wx/getOrderInfo',{
-        planType:'N'
-      }).then((res) => {
-          if(res.code == 200){
-              if(res.errCode === 4){
-                wx.navigateTo({
-                  url: '../register/register',
-                })
-              }
-          }
-      })
-      // wx.navigateTo({
-      //   url: '../park/park',
-      // })
-  },
-  halfParkHandle: function(){
-      wx.navigateTo({
-        url: '../register/register',
-      })
-  },
-  yearParkHandle: function(){
-      wx.navigateTo({
-        url: '../carInfo/carInfo',
-      })
-  },
-  initBanner(){
-     http('/wx/getRotationPicList',null).then((res) => {
-        if(res.code == 200){
-          this.setData({
-            rotationPicList:res.rotationPicList
+  parkHandle: function (e) {
+    const orderType = e.currentTarget.dataset.type
+    http('/wx/getOrderInfo', {
+      planType: orderType
+    }).then((res) => {
+      if (res.code == 200) {
+        if (res.errCode === 4) {
+          wx.navigateTo({
+            url: '../register/register',
           })
+        }else if(res.errCode === 5){
+          wx.navigateTo({
+            url: '../carInfo/carInfo',
+          })
+        }else if(res.errCode === 1){
+            wx.setStorageSync('carList', JSON.stringify(res.carList))
+            wx.setStorageSync('order', JSON.stringify(res.order))
+            wx.setStorageSync('parklotList', JSON.stringify(res.parklotList))
+            wx.navigateTo({
+              url: '../park/park?orderType=' + orderType,
+            })
         }
-     })
+      }
+    })
+    // wx.navigateTo({
+    //   url: '../park/park',
+    // })
+  },
+  halfParkHandle: function () {
+    wx.navigateTo({
+      url: '../register/register',
+    })
+  },
+  yearParkHandle: function () {
+    wx.navigateTo({
+      url: '../carInfo/carInfo',
+    })
+  },
+  initBanner() {
+    http('/wx/getRotationPicList', null).then((res) => {
+      if (res.code == 200) {
+        this.setData({
+          rotationPicList: res.rotationPicList
+        })
+      }
+    })
+  },
+  initNews() {
+    http('/wx/getNewsList', null).then((res) => {
+          if(res.code === 200){
+            res.newsList.forEach((item) => {
+                if(item.newsIcon){
+                  res.url = this.data.baseUrl + item.newsIcon.filepath
+                }else{
+                  res.url = ''
+                }
+            })
+              this.setData({
+                newsList:res.newsList[0]
+              })
+          }
+    })
+  },
+  more(){
+    wx.navigateTo({
+      url: '../news/news',
+    })
   }
 })

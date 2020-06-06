@@ -1,0 +1,7 @@
+<!--pages/home/news/news.wxml-->
+ <block wx:for="{{newsList}}" wx:key="*this">
+    <view class="news-item">
+        <image src="{{item.url}}"></image>
+        <view><rich-text nodes="{{item.newsContent}}" /></view>
+    </view>
+</block>

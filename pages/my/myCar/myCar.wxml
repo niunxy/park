@@ -1,5 +1,6 @@
 <!--pages/my/myCar/myCar.wxml-->
 <view>
+<block wx:for="{{carList}}" wx:key="*this">
 	<view class="park-my-order-content">
 		<view class="title">
 			<image src="../../../assets/images/info.png"></image>
@@ -7,21 +8,22 @@
 		</view>
 		<view class="content">
 			<view class="order-title">
-				<text>雅迪电动车</text>
+				<text>{{item.carBrand}}</text>
 			</view>
 			<view class="park-my-order-detail">
 				<image src="../../../assets/images/myCar.png"></image>
 				<view class="order-content">
-					<view><text class="park-my-order-title">车辆类别：</text></view>
-					<view><text class="park-my-order-title">购车时间：</text>2009-09-18</view>
-					<view><text class="park-my-order-title">车架号码：</text>342kl34</view>
+					<view><text class="park-my-order-title">车辆类别：</text>{{item.carType}}</view>
+					<view><text class="park-my-order-title">购车时间：</text>{{item.buyTime}}</view>
+					<view><text class="park-my-order-title">车架号码：</text>{{item.carVin}}</view>
 				</view>
 			</view>
       <view class="total">
-        <view class="amount">总额<text>¥10</text></view>
-				<text>充值时间：2020-02-04</text>
+        <view class="amount">总额<text>¥{{item.buyPrice}}</text></view>
+				<text>充值时间：{{item.buyTime}}</text>
       </view>
 		</view>
 	</view>
-	<view class="bottom">新增</view>
+	</block>
+	<button type="primary" class="bottom" bindtap="addCar">新增</button>
 </view>

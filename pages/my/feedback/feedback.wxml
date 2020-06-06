@@ -1,2 +1,20 @@
 <!--pages/my/feedback/feedback.wxml-->
-<text>pages/my/feedback/feedback.wxml</text>
+<view>
+	<view>
+		<input data-type="opinionContent" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入意见"/>
+	</view>
+	<view class="carPic">
+		<image wx:if="{{!pic}}" bindtap="upload" src="../../../assets/images/p.png"></image>
+		<image wx:else bindtap="upload" src="{{pic}}"></image>
+	</view>
+  	<view>
+      <view>您的联系方式：</view>
+      <view class="phone">{{phone}}</view>
+    </view>
+    <view class="opinion">
+        <text>
+            请留下您的联系方式，以便我们能够方便了解问题以及您反馈问题结果。紧急问题可拨打123-456-789，获得及时帮助
+        </text>
+    </view>
+	<button type="primary" bindtap="submitHandle">意见反馈</button>
+</view>

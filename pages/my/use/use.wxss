@@ -1,0 +1,23 @@
+/* pages/my/use/use.wxss */
+.steps{
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 12rpx;
+  margin: 12rpx 24rpx;
+  display: flex;
+}
+.num{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  border:1px solid orange;
+  text-align: center;
+  margin-right:12rpx;
+}
+.howuseTitle{
+  padding-left: 12rpx;
+  border-left: 2px solid orange;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}

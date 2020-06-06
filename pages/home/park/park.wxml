@@ -10,10 +10,10 @@
 		</view>
 	</view>
 	<view class="park-my-content">
-		<view class="title">需付款：¥400.00元</view>
+		<view class="title">需付款：¥{{price}}元</view>
 		<view class="section">
 			<view class="section_title">车主信息</view>
-      <view class="section_input"><input data-type="carOwner" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="将会获取焦点"/></view>
+      <view class="section_input"><input data-type="carOwner" bindinput="bindDataHandle" value="{{order.realName}}" disabled="" class="weui-input" auto-focus placeholder="将会获取焦点"/></view>
 			<!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
 				<view class="picker">
 					当前选择：{{array[index]}}
@@ -22,35 +22,40 @@
 		</view>
     <view class="section">
 			<view class="section_title">联系电话</view>
-      <view class="section_input"><input data-type="phone" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
+      <view class="section_input"><input data-type="phone" disabled value="{{order.phonenumber}}" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入联系电话"/></view>
 		</view>
     <view class="section">
 			<view class="section_title">身份证号</view>
-      <view class="section_input"><input data-type="idCard" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
+      <view class="section_input"><input data-type="idCard"  disabled value="{{order.idCard}}" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
+		</view>
+    <view class="section">
+			<view class="section_title">小区名称</view>
+      <view class="section_input"><input data-type="idCard"  disabled value="{{order.villageName}}" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入身份证号"/></view>
 		</view>
     <view class="section ">
-			<view class="section_title">小区名称</view>
-			<picker class="section_input" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<view class="section_title">停车场</view>
+			<picker class="section_input" bindchange="bindLotChange" value="{{parklotList.parklotId}}" range="{{parklotList}}" range-key="parklotName">
 				<view class="picker">
-					{{array[index]}}
+					{{parklotList[index1].parklotName}}
 				</view>
 			</picker> 
 		</view>
     <view class="section">
-			<view class="section_title">停车场</view>
-      <view class="section_input"><input data-type="parkPlace" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入停车场"/></view>
-		</view>
-    <view class="section">
 			<view class="section_title">房号</view>
-      <view class="section_input"><input data-type="houseNo" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入房号"/></view>
+      <view class="section_input"><input data-type="houseNo" disabled value="{{order.userAddress}}" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入房号"/></view>
 		</view>
     <view class="section">
 			<view class="section_title">车辆类型</view>
-      <view class="section_input"><input data-type="carType" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入车辆类型"/></view>
+      <view class="section_input"><input data-type="carType" disabled value="{{carType}}" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入车辆类型"/></view>
 		</view>
-    <view class="section">
+    <view class="section ">
 			<view class="section_title">所停车辆</view>
-      <view class="section_input"><input data-type="parkCar" bindinput="bindDataHandle" class="weui-input" auto-focus placeholder="请输入所停车辆"/></view>
+			<picker class="section_input" bindchange="bindCarChange" value="{{carList.carType}}" range="{{carList}}" range-key="carBrand">
+				<view class="picker">
+					{{carList[index].carBrand}}
+				</view>
+			</picker> 
 		</view>
+		<button type="primary" bindtap="pay">立即支付</button>
 	</view>
 </view>

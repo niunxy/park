@@ -170,9 +170,10 @@ submitHandle(){
     idCardPic2:this.data.idCardPic2,
     idCardPic3:this.data.idCardPic3,
     facePic1:this.data.facePic1,
-  }).then((res) => {
+  },'post').then((res) => {
       if(res.code == 200){
-          
+          wx.setStorageSync('phnoe', this.data.phonenumber)
+          wx.navigateBack()
       }
   })
 }

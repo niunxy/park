@@ -1,5 +1,6 @@
 <!--pages/my/orderList/orderList.wxml-->
 <view>
+<block wx:for="{{orderList}}" wx:key="*this">
 	<view class="park-my-order-content" bindtap="orderHandle">
 		<view class="title">
 			<image src="../../../assets/images/info.png"></image>
@@ -7,21 +8,22 @@
 		</view>
 		<view class="content">
 			<view class="order-title">
-				<text>包月充值</text>
+				<text>{{item.orderType}}充值</text>
 				<text>充值成功</text>
 			</view>
 			<view class="park-my-order-detail">
 				<image src="../../../assets/images/order.png"></image>
 				<view class="order-content">
-					<view><text class="park-my-order-title">停车充值-包月充值</text></view>
-					<view><text class="park-my-order-title">充值用户：</text>hango</view>
-					<view><text class="park-my-order-title">充值金额：</text>10元</view>
+					<view><text class="park-my-order-title">停车充值-{{item.orderType}}充值</text></view>
+					<view><text class="park-my-order-title">充值用户：</text>{{item.realName}}</view>
+					<view><text class="park-my-order-title">充值金额：</text>{{item.orderPrice}}元</view>
 				</view>
 			</view>
       <view class="total">
-        <view class="amount">总额<text>¥10</text></view>
-				<text>充值时间：2020-02-04</text>
+        <view class="amount">总额<text>¥{{item.orderPrice}}</text></view>
+				<text>充值时间：{{item.orderStart}}</text>
       </view>
 		</view>
 	</view>
+	</block>
 </view>

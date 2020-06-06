@@ -42,5 +42,10 @@
                   <text>意见反馈</text>
                   <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
             </view>
+            <view class="park-my-cell" bindtap="myHandle" data-cellName='use'>
+                  <image class="park-my-list left size-48" src="../../../assets/images/feedback.png"></image>
+                  <text>如何使用</text>
+                  <image class="park-my-jump right size-48" src="../../../assets/images/arrow.png"></image>
+            </view>
       </view>
 </view>

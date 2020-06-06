@@ -14,13 +14,22 @@
     "pages/home/park/park",
     "pages/my/orderDetail/orderDetail",
     "pages/home/register/register",
-    "pages/home/carInfo/carInfo"
+    "pages/home/carInfo/carInfo",
+    "pages/my/use/use",
+    "pages/home/news/news"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "demo-block": "./components/demo-block/index"
   },
   "tabBar": {
     "selectedColor": "blue",

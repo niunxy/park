@@ -1,4 +1,4 @@
-const baseUrl = 'https://implement.mynatapp.cc/dev-api'
+const baseUrl = 'https://24hchw.com/prod-api'
 const fetch = function fetch(url, params, type = 'get') {
   return new Promise((resolve, reject) => {
     console.log(wx.getStorageSync('uToken'))

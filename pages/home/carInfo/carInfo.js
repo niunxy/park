@@ -1,5 +1,6 @@
 // pages/home/carInfo/carInfo.js
 const http =  require('../../../fetch/api')
+const app = getApp()
 Page({
 
   /**
@@ -17,18 +18,19 @@ Page({
     buyTime:''
   },
 
-  submitHandle(){
+  submitHandle: function(){
       http('/wx/insertUserCar',{
         carBrand:this.data.carBrand,
         carCode:this.data.carCode,
         carVin:this.data.carVin,
         buyPrice:this.data.buyPrice,
-        carPic:'',
-        carType:'',
-        buyTime:''
-
+        carPic:this.data.carPic,
+        carType:this.data.array[this.data.index],
+        buyTime:this.data.buyTime
       },'post').then((res) => {
-
+          if(res.code === 200){
+              wx.navigateBack()
+          }
       })
   },
 
@@ -118,7 +120,8 @@ Page({
             const data = JSON.parse(res.data)
             if(data.code === 200) {
               that.setData({
-                carPic:''
+                car: app.globalData.baseUrl + data.filePath,
+                carPic: data.fileUuid
               })
             }
             //do something

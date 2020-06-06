@@ -18,6 +18,9 @@ App({
             data:{
               code:res.code
             },
+            header:{
+              Authorization:wx.getStorageSync('uToken')
+            },
             success: function(res){
               if(res.data.code == 200){
                   wx.setStorageSync('uToken', res.data.uToken)
@@ -59,6 +62,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl:'https://implement.mynatapp.cc/dev-api'
+    baseUrl:'https://24hchw.com/prod-api'
   }
 })

@@ -33,8 +33,9 @@
       <view class="section_input"><input data-type="buyPrice" type="digit" bindinput="bindHandle" class="weui-input" auto-focus placeholder="请输入购买价格"/></view>
 		</view>
     <view class="upload-car">
-    		<image src="../../../assets/images/photo.png"></image>
+    		<image wx:if="{{!car}}" bindtap="upload" src="../../../assets/images/photo.png"></image>
+    		<image wx:else bindtap="upload" src="{{car}}"></image>
     		<view>请上传车辆照片</view>
     </view>
-    <button type="primary" class="submit" bindTap="submitHandle">完成提交</button>
+    <button type="primary" class="submit" bindtap="submitHandle">完成提交</button>
 </view>
